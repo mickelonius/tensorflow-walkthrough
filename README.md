@@ -3,8 +3,25 @@ The idea here was to build a really simple image classifier for the MNIST
 data set and to put together a small application that would serve the
 resulting model.
 
-Some decisions are just implied, like the use of Tensorflow 2.1 and Python 3. 
-Others will be enumerated here in this description.
+The BASH script `install.sh` should be run from the root directory of the project and Docker
+must be installed (script will exit if it's not). Also, an internet connection
+must be available in order to download Docker images from *Docker Hub*.
+
+See below for a more detailed description of the project.
+
+## Model
+A small ResNet model was used, as it was the focus of an example that I liked and performed 
+fairly well. It used 3 building blocks of residual learners, where a block
+is built up as shown below
+
+![alt text](res_block.png "Residual Building Block")
+
+in addition to a final batch normalization, an average pooling, and a Dense
+(fully connected) layer with 10 outputs, corresponding to the 10 digits in the
+image set.
+
+Each weight layer contains more batchnormalization and ReLU operations, in addition
+to convolution layers.
 
 ## Docker
 I decided to use docker images for both training the model and serving. 

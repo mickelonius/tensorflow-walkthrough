@@ -110,6 +110,7 @@ class ResNet(keras.Model):
 
         out = self.conv_initial(inputs)
 
+        # training=True, layer will normalize its inputs using the mean and variance of the current batch of inputs.
         out = self.blocks(out, training=training)
 
         out = self.final_bn(out, training=training)
@@ -117,7 +118,6 @@ class ResNet(keras.Model):
 
         out = self.avg_pool(out)
         out = self.fc(out)
-
 
         return out
 
