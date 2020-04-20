@@ -30,7 +30,7 @@ case $1 in
     --train)
     CONTAINERNAME="arturo_train"
     docker run --name $CONTAINERNAME --gpus all --rm -p 8888:8888 \
-    --mount type=bind,source=/home/mike/Repos/CaseStudies/Arturo,target=/arturo \
+    --mount type=bind,source=$PWD,target=/arturo \
     tensorflow/tensorflow:2.1.0-gpu-py3-jupyter &
 
     echo "  Waiting for arturo_train container...."
