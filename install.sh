@@ -79,6 +79,7 @@ case $2 in
     ;;
 
     *)
+    echo "NO --venv *************"
     source venv/bin/activate
     shift # past argument with no value
     ;;
