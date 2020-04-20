@@ -75,15 +75,15 @@ case $1 in
 
     "--venv")
     echo "--venv *************"
-    python3.6 -m venv ./venv
-    source ./venv/bin/activate
+    python3.6 -m venv env
+    source env/bin/activate
     pip install -r ./requirements.txt
     shift
     ;;
 
     *)
     echo "NO --venv *************"
-    source venv/bin/activate
+    source env/bin/activate
     shift # past argument with no value
     ;;
 
