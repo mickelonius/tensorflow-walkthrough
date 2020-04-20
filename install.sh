@@ -69,6 +69,7 @@ do
   sleep 2;
 done
 
+echo $2
 case $2 in
 
     "--venv")
