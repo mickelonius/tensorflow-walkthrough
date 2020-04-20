@@ -71,7 +71,7 @@ do
 done
 
 echo $1
-case $2 in
+case $1 in
 
     "--venv")
     echo "--venv *************"
