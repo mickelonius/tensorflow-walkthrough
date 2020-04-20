@@ -137,7 +137,7 @@ def main():
     print(x_test.shape, y_test.shape)
 
     x_new = x_test[:3]
-    np.save("my_mnist_tests.npy", x_new)
+    np.save("/arturo/my_mnist_tests.npy", x_new)
 
     num_classes = 10
     batch_size = 32
@@ -155,7 +155,7 @@ def main():
     model.summary()
 
     # train
-    checkpoint_path = "training_1/cp.ckpt"
+    checkpoint_path = "/arturo/training_1/cp.ckpt"
     checkpoint_dir = os.path.dirname(checkpoint_path)
 
     # Create a callback that saves the model's weights
@@ -177,7 +177,7 @@ def main():
     # Save as TFSavedModel
     model_version = "0001"
     model_name = "my_mnist_model"
-    model_path = os.path.join(model_name, model_version)
+    model_path = os.path.join('/arturo', model_name, model_version)
 
     tf.saved_model.save(model, model_path)
 
