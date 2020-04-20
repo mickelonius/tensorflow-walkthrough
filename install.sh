@@ -67,7 +67,21 @@ do
   sleep 2;
 done
 
-source venv/bin/activate
+case $2 in
+
+    --venv)
+    python3.6 -m venv ./venv
+    source venv/bin/activate
+    pip install -r ./requirements.txt
+    ;;
+
+    *)
+    source venv/bin/activate
+    shift # past argument with no value
+    ;;
+
+esac
+
 python client.py
 deactivate
 
