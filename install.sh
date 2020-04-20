@@ -70,19 +70,17 @@ do
   sleep 2;
 done
 
-echo $1
 case $1 in
 
     "--venv")
-    echo "--venv *************"
-    virtualenv -p $(which python3.6) venv
+    echo "Setting up virtualenv"
+    virtualenv -p $(which python3) venv
     source venv/bin/activate
     pip install -r ./requirements.txt
     shift
     ;;
 
     *)
-    echo "NO --venv *************"
     source venv/bin/activate
     shift # past argument with no value
     ;;
