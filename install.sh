@@ -25,6 +25,7 @@ docker pull tensorflow/serving:latest
 #########################################################
 # Train ResNet model, save for use in server
 #########################################################
+echo $1
 case $1 in
 
     --train)
