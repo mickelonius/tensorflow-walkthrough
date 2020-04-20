@@ -1,4 +1,4 @@
-# Mike Lee Response to Arturo's Data Science/Engineering Prompt
+# Using Tensorflow
 The idea here was to build a really simple image classifier for the MNIST 
 data set and to put together a small application that would serve the
 resulting model.
@@ -20,7 +20,7 @@ in addition to a final batch normalization, an average pooling, and a Dense
 (fully connected) layer with 10 outputs, corresponding to the 10 digits in the
 image set.
 
-Each weight layer contains more batchnormalization and ReLU operations, in addition
+Each weight layer contains more batch normalization and ReLU operations, in addition
 to convolution layers.
 
 ## Docker
