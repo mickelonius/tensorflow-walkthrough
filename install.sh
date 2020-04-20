@@ -71,7 +71,7 @@ done
 
 case $2 in
 
-    --venv)
+    "--venv")
     echo "--venv *************"
     python3.6 -m venv ./venv
     source ./venv/bin/activate
